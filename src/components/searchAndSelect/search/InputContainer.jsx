@@ -13,6 +13,7 @@ export  const InputContainer = styled.label`
   @media(min-width: 767px){
     margin-bottom: 0;
     width: 280px;
+    color
   }
 `;
 
