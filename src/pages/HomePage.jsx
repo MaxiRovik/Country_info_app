@@ -6,7 +6,7 @@ import {Controls} from "../components/searchAndSelect/Controls";
 import {CountryList} from "../components/countryList/CountryList";
 import {Card} from "../components/card/Card";
 
-const HomePage = (countries, setCountries) => {
+const HomePage = ({countries, setCountries}) => {
     // const [countries, setCountries ] = useState([]);
     let navigate = useNavigate();
     console.log(countries)
