@@ -23,9 +23,13 @@ const Wrapper = styled.div`
   }
 `
 
-export const Controls = () => {
+export const Controls = ({onSearch}) => {
     const [search, setSearch] = useState('');
     const [region, setRegion] = useState('');
+
+    useEffect(() => {
+        onSearch(search,region)
+    }, [search,region])
 
     return (
         <Wrapper>
@@ -35,7 +39,7 @@ export const Controls = () => {
                           isClearable
                           isSearchable = {false}
                           value = {region}
-                          onChange = {setRegion}
+                          onChange = {(e) => setRegion(e.value)}
             />
         </Wrapper>
     )
